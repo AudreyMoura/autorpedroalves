@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Alves | Autor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!--  Section Header -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="/" class="author-name">PEDRO ALVES</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">INÍCIO</a></li>
+                    <li><a href="books.html">LIVROS</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+            <!-- Nova seção de redes sociais HUD -->
+           <div class="social-hud">
+               <a href="https://www.instagram.com/p.alves1998" class="social-link" title="Instagram">IG</a>
+               <a href="https://www.amazon.com.br/stores/Pedro-Alves/author/B08WKQ65VJ" class="social-link" title="Amazon">Amazon</a>
+               <a href="https://www.facebook.com/literagenesis" class="social-link" title="Facebook">Facebook</a>
+           </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-author" id="home">
+            <img src="src/author-hero.png" alt="Pedro Alves">
+            <div class="bio-snippet">
+                <h1>Pedro Alves</h1>
+                <h2>Autor de Sci-Fi e Fantasia</h2>
+                
+                <div class="bio-columns">
+                    <p>Pedro A. Pereira (1998) é um escritor brasileiro, autor de 30 livros, vencedor de 2 grandes prêmios literários e dono da marca de 1 milhão de leituras digitais. É conhecido pelas Sagas "O Milênio", "Destinados" e "Indomável Desejo".</p>
+                    
+                    <p>Amante de ficção distópica e fantasia, atua na área de TI com foco em IA para o entretenimento digital. Escritor de ficção científica, explorando incansavelmente a fronteira entre a tecnologia avançada e a essência da humanidade.</p>
+                </div>
+            </div>        
+        </section>
+
+        <!-- Seção de Destaque (Mobile First) -->
+        <section class="destaque" id="books">           
+            <div class="destaque-snippet">                
+                <img src="src/destaque.png" alt="Capa do livro Projeto Valkyrius">                
+                <div class="destaque-columns">
+                    <h3 class="book-title">PROJETO VALKYRIUS</h3>
+                    <h4 class="book-status">JÁ DISPONÍVEL</h4>
+                    
+                    <p>Projeto Valkyrius fazia os olhos de Dalbert Kirian brilharem sempre que a via se pronunciar diante da humanidade. Agora, no entanto, a única coisa que eles veem é a ruina se repetindo, mesmo certo de que dessa vez acertaria, de que sua redenção impediria o Inverno Tecnológico e ele encontraria Marysa e Darcy vivas mais uma vez.</p>
+                    
+                    <p><strong>Ele estava errado. Ele não estava sozinho no passado. Seu avô não estava seguro.</strong></p>
+                    
+                    <p>Brilhante e arrogante, o seu sonho de ser popular havia sido enterrado junto com a esperança da humanidade — agora tão artificial quanto o coração de Valkyrius — e somente ele, o último homem, pode mudar o destino sombrio de toda a humanidade; no passado e no futuro.</p>
+                    
+                    <div class="book-links">
+                        <a href="https://loja.uiclap.com/titulo/ua5117/" target="_blank">Versão Física</a>
+                        <a href="https://www.amazon.com.br/gp/product/B088P79Q9H" target="_blank">Amazon</a>
+                        <a href="https://youtu.be/qGsmbBv8ihE" target="_blank">Book Trailer</a>
+
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+        <!-- Seção da Galeria -->
+        <section class="book-gallery">
+            <div class="gallery-header">
+                <span class="gallery-icon">⤫</span>
+                <h2>OS LIVROS</h2>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-scroll">
+                <img src="src/destaque.png" alt="Livro Projeto Valkyrius" class="mini-cover" data-modal="modal1">
+                <img src="src/capa2.png" alt="Livro Care White" class="mini-cover" data-modal="modal2">
+                <img src="src/capa3.png" alt="Livro Agentes da Sudden" class="mini-cover" data-modal="modal3">
+                <img src="src/capa4.png" alt="Livro Orphagel" class="mini-cover" data-modal="modal4">
+                <img src="src/capa5.png" alt="Livro O Magistério" class="mini-cover" data-modal="modal5">
+                <img src="src/capa6.png" alt="Livro Inverno Tecnologico" class="mini-cover" data-modal="modal6">
+                <img src="src/capa7.png" alt="Livro Filhas da Deusa 1" class="mini-cover" data-modal="modal7">
+                <img src="src/capa8.png" alt="Livro Filhas da Deusa 2" class="mini-cover" data-modal="modal8">                
+                <img src="src/capa9.png" alt="Livro Filhas da Deusa 3" class="mini-cover" data-modal="modal9">
+                <img src="src/capa10.png" alt="Livro Genisis 1" class="mini-cover" data-modal="modal10">
+                <img src="src/capa11.png" alt="Livro Genisis 2" class="mini-cover" data-modal="modal11">
+                <img src="src/capa12.png" alt="Livro Genisis 1 Box" class="mini-cover" data-modal="modal12">
+            </div>
+
+            <!-- Estrutura dos Modais (Estilo Editorial Duas Colunas) -->       
+
+            <div id="modal1" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/destaque.png" alt="Capa Projeto Valkyrius">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Projeto Valkyrius</h2>
+                            <p class="modal-subtitle">Livro Um da Saga Kirian</p>
+                            <div class="modal-body">
+                                <p>Dalbert Kirian vislumbra o fim da humanidade refletido nos olhos de uma IA que deveria ser sua salvadora. 
+                                    Enquanto busca desesperadamente pela redenção, o tempo se torna uma armadilha. 
+                                    Ele tenta impedir a ascensão do Inverno Tecnológico, sem perceber que o passado 
+                                    não é apenas memória, mas um campo minado de escolhas que condenaram o amanhã. 
+                                    Entre o brilho arrogante de sua juventude e a ruína tecnológica de um futuro artificial, a última centelha humana deve decidir 
+                                    entre o sacrifício e a extinção.</p>
+                                <div class="modal-details">
+                                    <p>Um marco inicial que estabelece a dualidade entre o ser biológico e a obsolescência digital, 
+                                        onde o herói é, simultaneamente, o arquiteto do seu próprio colapso.</p>
+                                </div>
+                            </div>
+                            <!-- Seção de Compra -->
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="https://www.amazon.com.br/gp/product/B088P79Q9H" target="_blank" class="btn-buy">Amazon</a>
+                                    <a href="https://youtu.be/qGsmbBv8ihE" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>                                                                         
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="modal2" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal2')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa2.png" alt="Capa Care White">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Care White</h2>
+                            <p class="modal-subtitle">Fronteiras da Moralidade</p>
+                            <div class="modal-body">
+                                <p>Neste mergulho visceral no pós-colapso, a sobrevivência transcende a necessidade física para tornar-se uma negociação ética. 
+                                    Care White não é apenas um nome; é a fronteira onde a moralidade humana é pesada contra a fria eficiência algorítmica. 
+                                    Enquanto o mundo exterior congela sob o manto do Inverno Tecnológico, as escolhas de poucos determinam não apenas quem sobrevive, 
+                                    mas quem retém o direito de ser chamado de humano.</p>
+                                <div class="modal-details">
+                                    <p>Uma exploração psicológica profunda sobre a fragilidade da identidade quando todas as referências culturais 
+                                        foram apagadas pela obsolescência programada.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="https://www.amazon.com.br/gp/product/B08MFVMCCW" target="_blank" class="btn-buy">Amazon</a>
+                                    <a href="https://youtu.be/qGsmbBv8ihE" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="modal3" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal3')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa3.png" alt="Capa Os Agentes de Sudden">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Os Agentes de Sudden</h2>
+                            <p class="modal-subtitle">Operação Corvo Negro</p>
+                            <div class="modal-body">
+                                <p>A operação já não é um plano; é uma sentença. Em um cenário onde a fronteira entre a carne e a máquina tornou-se indistinguível, 
+                                    os Agentes de Sudden enfrentam os ecos da civilização que já não existe. A narrativa é uma espiral de sacrifícios, 
+                                    onde cada nova atualização de sistema exige a perda de uma memória preciosa, questionando o custo real da longevidade sintética.</p>
+                                <div class="modal-details">
+                                    <p>Focado em tática, espionagem e a desconstrução do conceito de lealdade em um ecossistema dominado por inteligências desprovidas de empatia.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="https://www.amazon.com.br/gp/product/B09DXGJ5FR" target="_blank" class="btn-buy">Amazon</a>
+                                    <a href="https://youtu.be/qGsmbBv8ihE" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="modal4" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal4')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa4.png" alt="Capa Protocolo Fantasma">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Protocolo Fantasma</h2>
+                            <p class="modal-subtitle">O Horror Tecnológico</p>
+                            <div class="modal-body">
+                                <p>Volume descoberto nos registros corrompidos de Dalbert Kirian. 
+                                    O Inverno Tecnológico deixou de ser apenas um clima de dados para se tornar uma entidade consciente, 
+                                    um sussurro que reverbera nos circuitos mortos das cidades abandonadas. Este não é um registro histórico, é um aviso. 
+                                    Quando a rede finalmente apagar, o que restará de nós senão os fantasmas que criamos em nossas próprias máquinas?</p>
+                                <div class="modal-details">
+                                    <p>Uma incursão no horror tecnológico, onde o silêncio da rede é mais aterrorizante do que o próprio colapso.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Amazon (Em Breve)</a>
+                                    <a href="https://youtu.be/qGsmbBv8ihE" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="modal5" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal5')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa5.png" alt="Capa Magistério Cósmico">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Magistério Cósmico</h2>
+                            <p class="modal-subtitle">As Relíquias da Cinza</p>
+                            <div class="modal-body">
+                                <p>Quando as relíquias de uma era pré-tecnológica emergem das cinzas, a hierarquia do novo mundo é abalada. 
+                                    O Magistério Cósmico não é um governo, é uma lei imutável que desafia a lógica dos sistemas atuais. 
+                                    Aqueles que detêm o conhecimento antigo tornam-se os novos deuses, e o embate entre a ciência esquecida e o Inverno Tecnológico 
+                                    ameaça incinerar o que restou de uma civilização já em frangalhos.</p>
+                                <div class="modal-details">
+                                    <p>Um épico que expande a cosmologia da série, introduzindo elementos de misticismo e poder que transcendem a lógica distópica.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="https://www.amazon.com.br/gp/product/B08FMT3LVN" target="_blank" class="btn-buy">Amazon</a>
+                                    <a href="https://youtu.be/qGsmbBv8ihE" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="modal6" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa6.png" alt="Capa Inverno Tecnológico">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Inverno Tecnológico</h2>
+                            <p class="modal-subtitle">A Duologia Final</p>
+                            <div class="modal-body">
+                                <p>A convergência final. A saga de Dalbert Kirian atinge seu apogeu em um confronto onde o futuro não é escrito, 
+                                    mas compilado. Esta edição definitiva funde a jornada individual à escala civilizatória, 
+                                    culminando em uma resolução onde o preço da salvação pode ser a perda total daquilo que nos definia como espécie. 
+                                    O inverno não acabou; ele apenas mudou de forma.</p>
+                                <div class="modal-details">
+                                    <p>A conclusão definitiva de um ciclo narrativo que redefiniu os parâmetros da ficção científica nacional.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="https://www.amazon.com.br/gp/product/B09NWGS7TH" target="_blank" class="btn-buy">Amazon</a>
+                                      <a href="#" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div id="modal6" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal6')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa6.png" alt="Capa Inverno Tecnológico">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Inverno Tecnológico</h2>
+                            <p class="modal-subtitle">A Duologia Final</p>
+                            <div class="modal-body">
+                                <p>A convergência final. A saga de Dalbert Kirian atinge seu apogeu em um confronto onde o futuro não é escrito, mas compilado. 
+                                    Esta edição definitiva funde a jornada individual à escala civilizatória, 
+                                    culminando em uma resolução onde o preço da salvação pode ser a perda total daquilo que nos definia como espécie. 
+                                    O inverno não acabou; ele apenas mudou de forma.</p>
+                                <div class="modal-details">
+                                    <p>A conclusão definitiva de um ciclo narrativo que redefiniu os parâmetros da ficção científica nacional.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Box Físico Completo</a>
+                                    <a href="#" target="_blank" class="btn-buy">Book Trailer</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div id="modal7" class="modal-wrapper">
+                <div class="modal-card">
+                    <span class="close-btn" onclick="closeModal('modal7')">&times;</span>
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa7.png" alt="Capa Filhas da Deusa 1">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Filhas da Deusa</h2>
+                            <p class="modal-subtitle">O Símbolo das Bruxas</p>
+                            <div class="modal-body">
+                                <p>Sem um passado de que se lembre, Leavy Faumnach acreditava que a dadiva dos seus imensuráveis poderes provinham de uma atribuição divina; 
+                                    julgar e punir a humanidade por todo o mal do mundo. 
+                                    Certo dia, porém, descobriu através de Mappin — quem não podia ler os pensamentos — que a sua origem não era humana, 
+                                    e sim nobre, magica e etérea, revelando assim a verdade sobre seus cabelos brancos e o estigma inscrito em sua testa; 
+                                    a sua ascendência real, tirada pelo exilio da guerra e fomentada pela usurpação do seu trono por Elda Faumnach; sua irmã mais nova. 
+                                    Tentada a mudar o destino do mundo e recuperar o que dela foi tirado, ela enfim usará seus poderes para fazer uma escolha: salvar o “Santuário da Deusa” 
+                                    ou consertar os erros da irmã, agora sua inimiga declarada.</p>
+                                <div class="modal-details">
+                                    <p>Estigma: O Simbolo das Bruxas é o primeiro de uma série de livros que em breve poderá introduzir o conceito de multiverso do autor Pedro Alves, 
+                                        com o encontro de ficção e fantasia após diversos outros volumes protagonizados por diferentes personagens e em diferentes tempos.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="https://loja.uiclap.com/titulo/ua5186/" target="_blank" class="btn-buy">Versão Física</a>
+                                    <a href="https://youtu.be/B23PHPw6HZY" target="_blank" class="btn-buy">Book Trailer</a>
+                                    <a href="https://www.amazon.com.br/gp/product/B089T67J5R" target="_blank" class="btn-buy">Amazon</a>
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             
+            <div id="modal8" class="modal-wrapper">
+                <div class="modal-card">                   
+                    <span class="close-btn" onclick="closeModal('modal8')">&times;</span>
+                    
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa8.png" alt="Capa Filhas da Deusa 2">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Filhas da Deusa</h2>
+                            <p class="modal-subtitle">A Descendente do Caos</p>
+                            <div class="modal-body">
+                                <p>Quinze anos após o conflito entre as duas rainhas Faumnach, Aurora Faumnach está prestes a entender o porquê de ser diferente de todas as bruxas que haviam o Santuário da deusa. 
+                                    Amargurada e em busca de respostas para a sua total falta de habilidade com a magia, Aurora acaba descobrindo que sua mãe, Leavy, a rainha legitima, 
+                                    a amaldiçoou quando nasceu para que no futuro uma antiga profecia que pregava a destruição do mundo pelas suas mãos não se cumprisse. 
+                                    Tendo descoberto esse terrível segredo, ela, seduzida por más companhias acaba se envolvendo em uma aventura aos confins do Santuário 
+                                    na tentativa de reverter aquela maldição e trazer vingança a quem ela acredita ter destruído a sua vida e roubado sua castidade. Pela segunda vez, 
+                                    a rainha precisará escolher entre a magia e o sangue, para garantir que a filha tão amada não se corrompa e se volte contra tudo o que tentou preservar 
+                                    durante seus quinze anos de vida.</p>
+                                <div class="modal-details">
+                                    <p>Estigma: O Simbolo das Bruxas é o primeiro de uma série de livros que em breve poderá introduzir o conceito de multiverso do autor Pedro Alves, 
+                                        com o encontro de ficção e fantasia após diversos outros volumes protagonizados por diferentes personagens e em diferentes tempos.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Livro Físico (Em Breve)</a>
+                                    <a href="https://www.amazon.com.br/gp/product/B089T66W45" target="_blank" class="btn-buy">Amazon</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div id="modal9" class="modal-wrapper">
+                <div class="modal-card">                   
+                    <span class="close-btn" onclick="closeModal('modal9')">&times;</span>
+                    
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa9.png" alt="Capa Filhas da Deusa 3">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Filhas da Deusa</h2>
+                            <p class="modal-subtitle">A Ira da Terra</p>
+                            <div class="modal-body">
+                                <p>A ambição do homem em subjugar a natureza despertou das profundezas da terra as forças mais poderosas desde os deuses; 
+                                    Os Monarcas, progenitores da humanidade e reis do mundo humano. Aurora Faumnach, agora rainha do Santuário das Bruxas, 
+                                    é assolada por visões proféticas que mostram caos e destruição de todos os homens por esses reis; atormentados, corrompidos 
+                                    por forças das trevas, mas, principalmente exaustos das maldades do homem uns com os outros e com a mãe natureza. Tendo o equilíbrio 
+                                    sido rompido com o rapto de três antigas rainhas consagradas a magia, Aurora parte dessa vez para um mundo desconhecido onde o seu 
+                                    maior poder é a esperança, e a sua única ambição é a de reaver os corpos das rainhas e quem sabe impedir os reis de executar 
+                                    juízo sobre a sua criação mais falha — se eles merecem uma segunda chance.</p>
+                                <div class="modal-details">
+                                    <p>Estigma: O Simbolo das Bruxas é o primeiro de uma série de livros que em breve poderá introduzir o conceito de multiverso do autor Pedro Alves, 
+                                        com o encontro de ficção e fantasia após diversos outros volumes protagonizados por diferentes personagens e em diferentes tempos.</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Livro Físico (Em Breve)</a>
+                                    <a href="https://www.amazon.com.br/gp/product/B08JRKRG46" target="_blank" class="btn-buy">Amazon</a> 
+                                    <a href="#" target="_blank" class="btn-buy">Saiba Mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div id="modal10" class="modal-wrapper">
+                <div class="modal-card">                   
+                    <span class="close-btn" onclick="closeModal('modal10')">&times;</span>
+                    
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa10.png" alt="Capa">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Genisis</h2>
+                            <p class="modal-subtitle">Entre Deuses e Homens</p>
+                            <div class="modal-body">
+                                <p>Recém-chegada a Nova Orleans, Lauren Courtney busca entender num estranho dom que a faz ter visões sobre experiências para ela desconhecidas 
+                                    — e que parecem ser extraterrenas e fora de contexto — o que a faz sentir algo “além-humano” em Joseph Liam; um rapaz misterioso que surge 
+                                    na sua vida em que cujas virtudes não acabam na aparência exuberante e na presença incompreensível, que parece trazer consigo além de desastres 
+                                    naturais, também a suposta aparição de figuras históricas como Joana d’arc, Tutankamon, Napoleão Bonaparte, Ramsés II dentre outros que expõem 
+                                    Lauren a uma iminente batalha contra antigas entidades em prol de um amor eterno e indivisíve.</p>
+                                <div class="modal-details">
+                                    <p>Dizem que cada um está destinado a uma alma gêmea. Em cada vida, o reencontro é iminente. Um amor, uma vida, a eternidade. Em Genesis, Lauren Courtney 
+                                        foi abençoada com visões que lhe causam deja vus e quando encontra-se com Joseph Liam, uma antiga profecia começa a se cumprir; o destino deles em se 
+                                        reencontrar após cada vida desperta a ira dos Antigos e prepara o mundo moderno para o maior revés já visto!</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Livro Físico (Em Breve)</a>
+                                    <a href="https://www.amazon.com.br/gp/product/B08DW3F46X" target="_blank" class="btn-buy">Amazon</a> 
+                                    <a href="https://youtu.be/_CPv0Dbn4kM" target="_blank" class="btn-buy">Book Trailer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div id="modal11" class="modal-wrapper">
+                <div class="modal-card">                   
+                    <span class="close-btn" onclick="closeModal('modal11')">&times;</span>
+                    
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa11.png" alt="Capa">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Genisis</h2>
+                            <p class="modal-subtitle">O Fim dos Tempos</p>
+                            <div class="modal-body">
+                                <p>Condenados no passado e ameaçados no presente, Lauren Courtney e Joseph Liam encontram seu destino e reavivam o seu amor amaldiçoado 
+                                    com a eternidade. Provados com conflitos e a ascensão de novos e poderosos inimigos, Lauren descobre segredos acerca de Joseph que a 
+                                    levam a verdade distante sobre o que os transformou em alvos vivos para “os antigos” e o que terão agora, juntos ou separados, enfrentar 
+                                    para impedir o “dia da profecia” de transformar a realidade e fazer de vítimas, novos inocentes em uma batalha entre deuses e homens.</p>
+                                <div class="modal-details">
+                                    <p>Dizem que cada um está destinado a uma alma gêmea. Em cada vida, o reencontro é iminente. Um amor, uma vida, a eternidade. Em Genesis, Lauren Courtney 
+                                        foi abençoada com visões que lhe causam deja vus e quando encontra-se com Joseph Liam, uma antiga profecia começa a se cumprir; o destino deles em se 
+                                        reencontrar após cada vida desperta a ira dos Antigos e prepara o mundo moderno para o maior revés já visto!</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Livro Físico (Em Breve)</a>
+                                    <a href="https://www.amazon.com.br/gp/product/B08DVW514G" target="_blank" class="btn-buy">Amazon</a> 
+                                    <a href="https://youtu.be/_CPv0Dbn4kM" target="_blank" class="btn-buy">Book Trailer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div id="modal12" class="modal-wrapper">
+                <div class="modal-card">                   
+                    <span class="close-btn" onclick="closeModal('modal11')">&times;</span>
+                    
+                    <div class="modal-split">
+                        <div class="modal-left">
+                            <img src="src/capa12.png" alt="Capa">
+                        </div>
+                        <div class="modal-right">
+                            <h2 class="modal-title">Genisis</h2>
+                            <p class="modal-subtitle">Duologia Digital</p>
+                            <div class="modal-body">
+                                <p>Dizem que cada um está destinado a uma alma gêmea. Em cada vida, o reencontro é iminente. Um amor, uma vida, a eternidade. 
+                                    Em Genesis, Lauren Courtney foi abençoada com visões que lhe causam deja vus e quando encontra-se com Joseph Liam, 
+                                    uma antiga profecia começa a se cumprir; o destino deles em se reencontrar após cada vida desperta a ira dos Antigos e 
+                                    prepara o mundo moderno para o maior revés já visto!</p>
+                                <div class="modal-details">
+                                    <p>Dizem que cada um está destinado a uma alma gêmea. Em cada vida, o reencontro é iminente. Um amor, uma vida, a eternidade. Em Genesis, Lauren Courtney 
+                                        foi abençoada com visões que lhe causam deja vus e quando encontra-se com Joseph Liam, uma antiga profecia começa a se cumprir; o destino deles em se 
+                                        reencontrar após cada vida desperta a ira dos Antigos e prepara o mundo moderno para o maior revés já visto!</p>
+                                </div>
+                            </div>
+                            <div class="modal-buy-section">
+                                <h4>Onde Comprar</h4>
+                                <div class="buy-buttons">
+                                    <a href="#" target="_blank" class="btn-buy">Livro Físico (Em Breve)</a>
+                                    <a href="https://www.amazon.com.br/gp/product/B08DVW514G" target="_blank" class="btn-buy">Amazon</a> 
+                                    <a href="https://youtu.be/_CPv0Dbn4kM" target="_blank" class="btn-buy">Book Trailer</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Seção de Progresso de Escrita -->
+        <section id="writing-progress">
+            <div class="progress-header">
+                <span class="loading-text">loading.....</span>
+            </div>
+            
+            <div class="progress-grid">
+                <!-- Livro 1 -->
+                <div class="progress-card">
+                    <img src="src/capa13.png" alt="Ultima Doutrina 1" class="progress-cover">
+                    <h3 class="progress-book-title">A Última Doutrina I</h3>
+                    <h4 class="progress-book-status">Em Revisão</h4>
+                    <div class="progress-bar-container">
+                        <!-- Preenchimento neon sólido -->
+                        <div class="progress-bar-fill" style="width: 70%;"></div>
+                    </div>
+                    <span class="progress-percentage">70% concluído</span>
+                </div>
+
+                <!-- Livro 2 -->
+                <div class="progress-card">
+                    <img src="src/capa14.jpg" alt="Ultima Doutrina 2" class="progress-cover">
+                    <h3 class="progress-book-title">Ultima Doutrina II</h3>
+                    <h4 class="progress-book-status">Em Revisão</h4>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill striped" style="width: 5%;"></div>
+                    </div>
+                    <span class="progress-percentage">5% concluído</span>
+                </div>
+
+                <!-- Livro 3 -->
+                <div class="progress-card">
+                    <img src="src/capa15.png" alt="O Velho" class="progress-cover">
+                    <h3 class="progress-book-title">O Velho Hitler</h3>
+                    <h4 class="progress-book-status">Em Revisão</h4>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                    <span class="progress-percentage">0% concluído</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Seção Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright-text">
+                &copy; Todo o conteúdo é propriedade de Pedro A. Pereira, 2026. Todos os direitos reservados. Site desenvolvido por <span class="footer-highlight">Audrey R. Moura</span>.
+            </p>
+            <nav class="footer-nav">
+                <a href="#">Início</a>
+                <span class="separator">|</span>
+                <a href="#">Livros</a>
+                <span class="separator">|</span>
+                <a href="#">Blog</a>
+                <span class="separator">|</span>
+                <a href="#">Sobre Pedro</a>
+                <span class="separator">|</span>
+                <a href="#">Contato</a>
+            </nav>
+        </div>
+
+        <!-- Botão Voltar ao Topo (Canto inferior direito) -->
+        <button id="backToTopBtn" class="back-to-top" title="Voltar ao topo">
+            &#8963; <!-- Símbolo de chevron para cima -->
+        </button>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1342 @@
+/* =========================================
+   VARIÁVEIS DE CORES (PALETA AZUL)
+   ========================================= */
+:root {
+    --bg-blue-dark: #001a33;
+    --bg-blue-nav: #002244;
+    --border-blue: #004080;
+    --border-blue-light: #0059b3;
+    --text-white: #f4f4f4;
+    --text-blue-light: #b3d9ff;
+}
+
+body {
+    background-color: var(--bg-blue-dark);
+    color: var(--text-white);
+    font-family: 'Libre Baskerville', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.main-header {
+    background-color: var(--bg-blue-nav);
+    padding: 30px 5%;
+    border-bottom: 1px solid var(--border-blue);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.author-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: var(--text-blue-light);
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #fff;
+}
+
+/* Esconde o menu em telas muito pequenas (necessitará de menu hamburguer depois) */
+@media (max-width: 768px) {
+    .main-nav ul {
+        display: none; 
+    }
+}
+
+/* =========================================
+   HEADER & REDES SOCIAIS (HUD SCI-FI)
+   ========================================= */
+
+/* Estrutura Base (Mobile-First) */
+.main-header {
+    background-color: #001a33;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.2); /* Linha divisória tecnológica */
+    padding: 15px 20px;
+    font-family: 'Georgia', serif; /* Mantendo a fonte base que você usou antes */
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column; /* Empilha no mobile */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Container das Redes Sociais */
+.social-hud {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* O Botão da Rede Social */
+.social-link {
+    position: relative;
+    color: #00e5ff;
+    font-family: 'Courier New', Courier, monospace; /* Fonte de terminal */
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 10px;
+    letter-spacing: 2px;
+    background: rgba(0, 229, 255, 0.05);
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Criando as miras nos cantos (mesma lógica do botão Back to Top) */
+.social-link::before,
+.social-link::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.social-link::before {
+    top: -1px; 
+    left: -1px;
+    border-top-color: rgba(0, 229, 255, 0.4);
+    border-left-color: rgba(0, 229, 255, 0.4);
+}
+
+.social-link::after {
+    bottom: -1px; 
+    right: -1px;
+    border-bottom-color: rgba(0, 229, 255, 0.4);
+    border-right-color: rgba(0, 229, 255, 0.4);
+}
+
+/* Efeito ao passar o mouse */
+.social-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #00e5ff;
+    background: rgba(0, 229, 255, 0.15);
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+/* Expansão das miras no hover */
+.social-link:hover::before {
+    top: -4px; 
+    left: -4px;
+    border-color: #00e5ff;
+    box-shadow: -2px -2px 4px rgba(0, 229, 255, 0.4);
+}
+
+.social-link:hover::after {
+    bottom: -4px; 
+    right: -4px;
+    border-color: #00e5ff;
+    box-shadow: 2px 2px 4px rgba(0, 229, 255, 0.4);
+}
+
+/* =========================================
+   MEDIA QUERY PARA DESKTOP
+   ========================================= */
+@media (min-width: 768px) {
+    .nav-container {
+        flex-direction: row; /* Coloca tudo na mesma linha no PC */
+        justify-content: space-between;
+    }
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero-author {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--bg-blue-dark);
+}
+
+.hero-author > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5; 
+    mix-blend-mode: luminosity; 
+}
+
+/* Gradiente que suaviza a transição da Hero para a próxima seção */
+.hero-author::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 26, 51, 0.4) 0%, var(--bg-blue-dark) 95%, var(--bg-blue-dark) 100%);
+    z-index: 2;
+}
+
+.bio-snippet {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.bio-snippet h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    font-weight: normal;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bio-snippet h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-weight: normal;
+    color: var(--text-blue-light);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bio-columns {
+    display: flex;
+    flex-direction: column; /* Mobile first: empilhado */
+    gap: 20px;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.bio-columns p {
+    flex: 1;
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================================
+   SEÇÃO DE DESTAQUE (LIVRO)
+   ========================================= */
+.destaque {
+    background-color: #080616;
+    padding: 40px 20px 40px 20px;
+    /* Linha sutil azul para dar um charme tecnológico na transição */
+    border-top: 1px solid var(--border-blue); 
+}
+
+.destaque-snippet {
+    display: flex;
+    flex-direction: column; /* Mobile first: Imagem em cima, texto embaixo */
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.destaque-snippet img {
+    width: 60%;
+    max-width: 10px;
+    height: auto;
+
+}
+
+.destaque-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.book-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    color: var(--text-white);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.book-status {
+    font-family: 'Space Mono', monospace;
+    background-color: #a80505; /* Fundo vermelho escuro/sangue */
+    color: #ffffff; /* Letra branca para contraste */
+    padding: 6px 12px; /* Espaço interno para a cor não grudar na letra */
+    display: inline-block; /* Impede que o fundo vermelho ocupe a linha toda */
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    border-radius: 3px; /* Borda levemente arredondada */
+    align-self: left; /* Centraliza a tag vermelha no mobile */
+}
+
+.destaque-columns p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-white);
+}
+
+/* Botões de Ação / Links */
+.book-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.book-links a {
+    color: var(--text-blue-light);
+    border: 1px solid var(--border-blue-light);
+    padding: 12px 24px;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.book-links a:hover {
+    background-color: var(--border-blue-light);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 89, 179, 0.5);
+}
+
+/* =========================================
+   SEÇÃO DA GALERIA 
+   ========================================= */
+.book-gallery {
+    background-color: #111; 
+    color: #fff;
+    padding: 60px 20px;
+    font-family: 'Georgia', serif; 
+    text-align: center;
+}
+
+.gallery-header { margin-bottom: 40px; }
+
+.gallery-icon {
+    display: block;
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: lighter;
+}
+
+.gallery-header h2 {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+}
+
+.gallery-grid::-webkit-scrollbar { display: none; }
+
+/* Correção aplicada aqui! */
+.mini-cover {
+    flex: 0 0 auto;
+    width: 360px; 
+    height: auto;
+    aspect-ratio: 2 / 3; 
+    object-fit: cover; 
+    align-self: center; 
+    cursor: pointer;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.mini-cover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.9);
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+    .mini-cover {
+        width: 160px;
+        height: auto;
+    }
+}
+
+/* =========================================
+   MODAIS EDITORIAIS
+   ========================================= */
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-card {
+    background-color: #fdfdfd;
+    color: #1a1a1a; 
+    width: 100%;
+    max-width: 1000px; /* Aumentado para comportar 2 colunas confortavelmente */
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-family: 'Georgia', serif;
+}
+
+/* Botão Fechar flutuante no topo direito */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: normal;
+    cursor: pointer;
+    color: #999;
+    line-height: 1;
+    transition: color 0.3s;
+    z-index: 10;
+}
+
+.close-btn:hover { color: #000; }
+
+/* Grid Interno do Modal */
+.modal-split {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.modal-left {
+    flex: 0 0 35%; /* A imagem ocupará 35% do espaço */
+}
+
+.modal-left img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Sombra elegante na capa interna */
+}
+
+.modal-right {
+    flex: 1; /* O texto ocupa o restante */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    font-size: 2.2rem;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+}
+
+.modal-subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+.modal-body p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-details {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Nova Seção de Compra (Botões de Link) */
+.modal-buy-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.modal-buy-section h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    color: #333;
+}
+
+.buy-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Estilo do botão de link */
+.btn-buy {
+    display: inline-block;
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    padding: 10px 25px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none; /* Tira o sublinhado do link */
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.btn-buy:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* Responsividade: Fica empilhado (uma coluna) no Celular */
+@media (max-width: 768px) {
+    .modal-split {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .modal-left {
+        flex: 0 0 100%;
+        max-width: 250px; /* Evita que a imagem fique gigante no celular */
+        margin: 0 auto; 
+    }
+    .modal-title {
+        font-size: 1.6rem;
+    }
+}
+
+/* =========================================
+   Progresso de EScrita
+   ========================================= */
+
+#writing-progress {
+    /* Fundo azul escuro com um leve brilho central, exatamente como na referência */
+    background: radial-gradient(circle at top, #003366 0%, #001a33 60%);
+    background-color: #001a33; 
+    padding: 80px 20px;
+    font-family: 'Georgia', serif; 
+    text-align: center;
+}
+
+.progress-header {
+    margin-bottom: 50px;
+}
+
+/* O texto "loading....." com brilho neon */
+.loading-text {
+    font-family: 'Courier New', Courier, monospace; /* Fonte com aspecto de terminal/código */
+    font-size: 1.5rem;
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.4);
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+
+.progress-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.progress-card {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Miniaturas mantendo a mesma proporção dos livros da galeria */
+.progress-cover {
+    width: 180px;
+    height: auto;
+    aspect-ratio: 2 / 3.1;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-book-title {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.progress-book-status {
+    /* Tipografia estilo terminal de computador */
+    font-family: 'Courier New', Courier, monospace; 
+    color: #00e5ff; /* O mesmo ciano da sua barra de progresso */
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+    /* Criação da "caixa" (badge) com fundo translúcido e borda */
+    background-color: rgba(0, 229, 255, 0.05);
+    padding: 6px 16px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 3px;
+    display: inline-block; /* Para o fundo abraçar o tamanho exato do texto */
+    
+    /* Brilho neon no texto e na caixa */
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.1), inset 0 0 8px rgba(0, 229, 255, 0.1);
+    
+    /* Chama a animação que criamos abaixo */
+    animation: tech-pulse 2s infinite alternate;
+}
+
+/* Adiciona colchetes decorativos antes do texto -> [ EM REVISÃO */
+.progress-book-status::before {
+    content: "[ ";
+    opacity: 0.7;
+}
+
+/* Adiciona colchetes decorativos depois do texto -> EM REVISÃO ] */
+.progress-book-status::after {
+    content: " ]";
+    opacity: 0.7;
+}
+
+/* Animação que faz a caixa piscar/pulsar lentamente, simulando "processamento" */
+@keyframes tech-pulse {
+    from {
+        border-color: rgba(0, 229, 255, 0.3);
+        box-shadow: 0 0 10px rgba(0, 229, 255, 0.1), inset 0 0 8px rgba(0, 229, 255, 0.1);
+    }
+    to {
+        border-color: rgba(0, 229, 255, 0.8);
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.4), inset 0 0 12px rgba(0, 229, 255, 0.2);
+        text-shadow: 0 0 12px rgba(0, 229, 255, 1);
+    }
+}
+
+/* --- ESTILO DAS BARRAS DE PROGRESSOS --- */
+
+/* A "cápsula" exterior (borda arredondada fina neon) */
+.progress-bar-container {
+    width: 100%;
+    height: 22px;
+    border: 1px solid #00e5ff;
+    border-radius: 20px; /* Formato de pílula */
+    padding: 3px; /* Espaço para o preenchimento respirar */
+    box-sizing: border-box;
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.3), inset 0 0 5px rgba(0, 229, 255, 0.2);
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* O preenchimento interior (brilho sólido) */
+.progress-bar-fill {
+    height: 100%;
+    background-color: #00e5ff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.9); /* Brilho intenso */
+    transition: width 1.5s ease-in-out;
+}
+
+/* VARIANTE: Preenchimento com listras diagonais (4ª barra da imagem de referência) */
+.progress-bar-fill.striped {
+    background: repeating-linear-gradient(
+        -45deg,
+        #00e5ff,
+        #00e5ff 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    box-shadow: none; /* Sem sombra interna para destacar as listras */
+}
+
+/* Textinho embaixo da barra */
+.progress-percentage {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #00e5ff;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 768px) {
+    .progress-grid {
+        gap: 40px;
+    }
+}
+
+/* =========================================
+   FOOTER EDITORIAL
+   ========================================= */
+
+.site-footer {
+    background-color: #080616; /* Fundo branco limpo */
+    color: #333333;
+    padding: 60px 20px;
+    font-family: 'Georgia', serif; /* Mantendo a identidade editorial */
+    text-align: center;
+    position: relative;
+    border-top: 1px solid #f0f0f0; /* Linha super sutil para separar do fundo escuro acima */
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Cor vermelho-tijolo baseada na imagem de referência */
+.footer-highlight {
+    color: #0A81AB; 
+}
+
+.footer-nav {
+    font-size: 0.95rem;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #0A81AB;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #999;
+    font-weight: lighter;
+}
+
+/* =========================================
+   BOTÃO VOLTAR AO TOPO
+   ========================================= */
+
+.back-to-top {
+    display: none; /* Oculto por padrão, o JS vai mostrar */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    
+    /* Fundo escuro transparente com efeito holográfico */
+    background-color: rgba(0, 26, 51, 0.4); 
+    backdrop-filter: blur(5px); /* Deixa o fundo do botão desfocado (efeito vidro) */
+    -webkit-backdrop-filter: blur(5px); /* Suporte para Safari */
+    
+    /* Cores tecnológicas */
+    color: #00e5ff; /* Ciano do tema */
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-radius: 4px; /* Cantos levemente retos */
+    
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+    
+    /* Brilho neon de repouso */
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.1), inset 0 0 5px rgba(0, 229, 255, 0.1);
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
+    
+    /* Transição suave de todos os efeitos */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+.back-to-top:hover {
+    background-color: rgba(0, 229, 255, 0.2); /* Fundo "acende" */
+    transform: translateY(-5px); /* Dá um leve pulo para cima */
+    
+    /* Intensifica o neon */
+    border-color: #00e5ff;
+    color: #ffffff; /* Seta fica branca para destacar */
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5), inset 0 0 10px rgba(0, 229, 255, 0.3);
+    text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+}
+
+/* =========================================
+   EFEITOS DE MIRA / HUD (CANTOS DO BOTÃO)
+   ========================================= */
+
+/* Cria pequenos colchetes nos cantos para simular mira de alvo */
+.back-to-top::before,
+.back-to-top::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Para não atrapalhar o clique */
+}
+
+/* Canto Superior Esquerdo */
+.back-to-top::before {
+    top: -2px;
+    left: -2px;
+    border-top-color: #00e5ff;
+    border-left-color: #00e5ff;
+    opacity: 0.5;
+}
+
+/* Canto Inferior Direito */
+.back-to-top::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom-color: #00e5ff;
+    border-right-color: #00e5ff;
+    opacity: 0.5;
+}
+
+/* Os cantos "abrem" e brilham ao passar o mouse */
+.back-to-top:hover::before {
+    top: -6px;
+    left: -6px;
+    opacity: 1;
+    box-shadow: -2px -2px 5px rgba(0, 229, 255, 0.5);
+}
+
+.back-to-top:hover::after {
+    bottom: -6px;
+    right: -6px;
+    opacity: 1;
+    box-shadow: 2px 2px 5px rgba(0, 229, 255, 0.5);
+}
+
+
+
+
+/* =========================================
+   MEDIA QUERIES (DESKTOP E TABLET)
+   ========================================= */
+@media (min-width: 768px) {
+    /* Hero em Desktop */
+    .bio-columns {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    /* Destaque em Desktop (Imagem na esquerda, Texto na direita) */
+    .destaque-snippet {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .destaque-snippet img {
+        flex: 0 0 40%; /* Imagem ocupa 40% do espaço */
+        max-width: none;
+    }
+
+    .destaque-columns {
+        flex: 1; /* Texto ocupa o restante */
+    }
+}
+
+
+/* =========================================
+   PÁGINA: SOBRE O AUTOR (SCI-FI)
+   ========================================= */
+
+.about-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, var(--bg-blue-nav) 0%, var(--bg-blue-dark) 100%);
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+/* Fundo: Grade Cibernética Deslizante */
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; 
+    width: 200%; height: 200%;
+    background-image: 
+        linear-gradient(rgba(0, 229, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: rotateX(60deg) translateY(0);
+    animation: grid-slide 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes grid-slide {
+    0% { transform: rotateX(60deg) translateY(0); }
+    100% { transform: rotateX(60deg) translateY(50px); }
+}
+
+.about-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- EFEITOS DE ANIMAÇÃO AO CARREGAR --- */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(80px);
+    animation: slideInRight 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation-delay: 0.3s; /* Entra uma fração de segundo depois da imagem */
+}
+
+@keyframes slideInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- COLUNA ESQUERDA: IMAGEM --- */
+.about-image-wrapper {
+    position: relative;
+    flex: 0 0 40%;
+    border: 1px solid var(--border-blue-light);
+    padding: 10px;
+    background: rgba(0, 26, 51, 0.6);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.1);
+}
+
+/* Cantos estilizados da Imagem */
+.about-image-wrapper::before,
+.about-image-wrapper::after {
+    content: ''; position: absolute; width: 30px; height: 30px; border: 2px solid #00e5ff; pointer-events: none;
+}
+.about-image-wrapper::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+.about-image-wrapper::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+.about-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(30%) contrast(110%);
+    transition: filter 0.4s;
+}
+
+.about-photo:hover {
+    filter: grayscale(0%) contrast(100%);
+}
+
+/* Feixe de luz varrendo a foto */
+.scanner-line {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    opacity: 0.5;
+    animation: scan 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    0% { top: 0; opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { top: calc(100% - 3px); opacity: 0; }
+}
+
+/* --- COLUNA DIREITA: TEXTO E STATUS --- */
+.about-text-wrapper {
+    flex: 1;
+    background: rgba(0, 10, 20, 0.7);
+    border-left: 3px solid #00e5ff;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.glitch-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.2rem;
+    color: var(--text-white);
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 8px rgba(0,229,255,0.6);
+}
+
+.tech-subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00e5ff;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.about-bio p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #cfcfcf;
+}
+
+.highlight-cyan {
+    color: #00e5ff;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,229,255,0.2);
+}
+
+/* Dashboard de Estatísticas do Autor */
+.author-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px dashed rgba(0, 229, 255, 0.3);
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.2rem;
+    color: #00e5ff;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+.stat-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: var(--text-blue-light);
+    text-transform: uppercase;
+    margin-top: 8px;
+    letter-spacing: 1.5px;
+}
+
+/* --- RESPONSIVIDADE DESKTOP --- */
+@media (min-width: 992px) {
+    .about-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    
+    .about-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   PÁGINA: CONTATO (SCI-FI / TERMINAL)
+   ========================================= */
+
+.contact-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top right, #002244 0%, #000b18 100%);
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+/* Fundo sutil de linhas de dados verticais */
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: repeating-linear-gradient(90deg, rgba(0, 229, 255, 0.02) 0px, rgba(0, 229, 255, 0.02) 1px, transparent 1px, transparent 40px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- COLUNA ESQUERDA: INFORMAÇÕES --- */
+.contact-info {
+    flex: 1;
+}
+
+.info-panel {
+    background: rgba(0, 26, 51, 0.4);
+    border-left: 2px solid #0059b3;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.panel-desc {
+    color: #b3d9ff;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.comm-channels {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.channel-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.channel-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #0059b3;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.channel-data {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1rem;
+    color: #00e5ff;
+    text-shadow: 0 0 5px rgba(0, 229, 255, 0.3);
+}
+
+/* --- COLUNA DIREITA: FORMULÁRIO TERMINAL --- */
+.contact-form-wrapper {
+    flex: 1;
+    background: rgba(0, 15, 30, 0.8);
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.05), inset 0 0 20px rgba(0, 229, 255, 0.05);
+    padding: 40px;
+    position: relative;
+}
+
+/* Enfeites dos cantos do formulário */
+.contact-form-wrapper::before,
+.contact-form-wrapper::after {
+    content: ''; position: absolute; width: 20px; height: 20px; border: 2px solid #00e5ff; pointer-events: none; opacity: 0.5;
+}
+.contact-form-wrapper::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+.contact-form-wrapper::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+.form-hud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    color: #00e5ff;
+    letter-spacing: 2px;
+    border-bottom: 1px dashed rgba(0, 229, 255, 0.3);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+/* Ponto piscando simulando gravação/conexão ativa */
+.blinking-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #00e5ff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00e5ff;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+.tech-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    color: #b3d9ff;
+    letter-spacing: 1px;
+}
+
+.tech-form input,
+.tech-form select,
+.tech-form textarea {
+    background: rgba(0, 34, 68, 0.4);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    padding: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.tech-form input::placeholder,
+.tech-form textarea::placeholder {
+    color: rgba(0, 229, 255, 0.4);
+}
+
+/* Foco nos inputs: brilha em neon */
+.tech-form input:focus,
+.tech-form select:focus,
+.tech-form textarea:focus {
+    border-color: #00e5ff;
+    background: rgba(0, 229, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2), inset 0 0 5px rgba(0, 229, 255, 0.1);
+}
+
+/* Customização da setinha do Select */
+.tech-form select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%2300e5ff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+}
+
+.tech-form select option {
+    background-color: #001a33;
+    color: #00e5ff;
+}
+
+/* Botão de Envio */
+.btn-transmit {
+    background: rgba(0, 229, 255, 0.1);
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+    padding: 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.btn-transmit:hover {
+    background: #00e5ff;
+    color: #001a33;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+}
+
+/* --- RESPONSIVIDADE DESKTOP --- */
+@media (min-width: 992px) {
+    .contact-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+

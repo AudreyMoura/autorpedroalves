@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Alves | Contato</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Section Header (Idêntico ao restante do site) -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="index.html" class="author-name">PEDRO ALVES</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#home">INÍCIO</a></li>
+                    <li><a href="index.html#books">LIVROS</a></li>
+                    <li><a href="index.html#blog">BLOG</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+            <!-- Seção de redes sociais HUD -->
+           <div class="social-hud">
+               <a href="https://www.instagram.com/p.alves1998" class="social-link" title="Instagram">IG</a>
+               <a href="https://www.amazon.com.br/stores/Pedro-Alves/author/B08WKQ65VJ" class="social-link" title="Amazon">AMZ</a>
+               <a href="https://www.facebook.com/literagenesis" class="social-link" title="Facebook">FB</a>
+           </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section Exclusiva: Contato -->
+        <section class="contact-hero">
+            <div class="contact-container">
+                
+                <!-- Coluna da Esquerda: Informações (Coordenadas) -->
+                <div class="contact-info slide-in-left">
+                    <h1 class="glitch-title">CONTATO</h1>
+                    <h2 class="tech-subtitle">/// ESTABELECENDO CONEXÃO_</h2>
+                    
+                    <div class="info-panel">
+                        <p class="panel-desc">Sistemas de comunicação abertos. Envie sua mensagem para parcerias, direitos de adaptação, eventos ou apenas para relatar anomalias no multiverso.</p>
+                        
+                        <div class="comm-channels">
+                            <div class="channel-box">
+                                <span class="channel-label">[ FREQUÊNCIA DE E-MAIL ]</span>
+                                <span class="channel-data">comunicacao@pedroalves-scifi.com.br</span>
+                            </div>
+
+                            <div class="channel-box">
+                                <span class="channel-label">[ AGÊNCIA LITERÁRIA ]</span>
+                                <span class="channel-data">Agência Estelar BR <br> +55 (11) 99999-0000</span>
+                            </div>
+
+                            <div class="channel-box">
+                                <span class="channel-label">[ COORDENADAS BASE ]</span>
+                                <span class="channel-data">Setor Sul, São Paulo, SP - Terra</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna da Direita: Formulário de Contato (Terminal) -->
+                <div class="contact-form-wrapper slide-in-right">
+                    <div class="form-hud-header">
+                        <span>SINAL DE UPLINK PRONTO</span>
+                        <span class="blinking-dot"></span>
+                    </div>
+                    
+                    <form action="#" method="POST" class="tech-form">
+                        <div class="input-group">
+                            <label for="nome">IDENTIFICAÇÃO</label>
+                            <input type="text" id="nome" name="nome" placeholder="> Digite seu nome..." required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">SINAL DE RETORNO (E-MAIL)</label>
+                            <input type="email" id="email" name="email" placeholder="> Digite seu e-mail..." required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="assunto">ASSUNTO</label>
+                            <select id="assunto" name="assunto">
+                                <option value="leitor">> Mensagem de Leitor</option>
+                                <option value="direitos">> Direitos de Adaptação / Audiovisual</option>
+                                <option value="eventos">> Convite para Eventos</option>
+                                <option value="imprensa">> Imprensa / Entrevistas</option>
+                                <option value="outros">> Outros Assuntos</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="mensagem">MENSAGEM DE TRANSMISSÃO</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="> Insira os dados da transmissão aqui..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-transmit">ENVIAR TRANSMISSÃO</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Section Footer (Idêntico ao restante do site) -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="copyright-text">
+                &copy; Todo o conteúdo é propriedade de Pedro A. Pereira, 2026. Todos os direitos reservados. Site desenvolvido por <span class="footer-highlight">Audrey R. Moura</span>.
+            </p>
+            <nav class="footer-nav">
+                <a href="index.html">Início</a>
+                <span class="separator">|</span>
+                <a href="index.html#books">Livros</a>
+                <span class="separator">|</span>
+                <a href="#">Blog</a>
+                <span class="separator">|</span>
+                <a href="sobre.html">Sobre Pedro</a>
+                <span class="separator">|</span>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+
+        <button id="backToTopBtn" class="back-to-top" title="Voltar ao topo">
+            &#8963;
+        </button>
+    </footer>
+</body>
+</html>
